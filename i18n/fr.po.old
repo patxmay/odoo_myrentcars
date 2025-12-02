@@ -1,0 +1,15 @@
+#. module name: rentcars
+msgid ""
+msgstr ""
+"Project-Id-Version: rentcars 1.0\n"
+"POT-Creation-Date: 2024-10-01 12:00+0000\n"
+"Language: fr\n"
+
+#. Description for summary
+msgid "Car rental management system"
+msgstr "Système de gestion de location de voitures"
+
+#. Description for description
+msgid "This module manages car rentals."
+msgstr "Ce module gère la location de voitures."
+

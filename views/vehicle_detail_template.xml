@@ -1,0 +1,19 @@
+<odoo>
+  <template id="vehicle_detail_template" name="Détail du véhicule">
+    <t t-call="website.layout">
+      <div class="oe_structure"/>
+      <title>Vehicle : <span t-field="vehicle.immatriculation"></span></title>
+      <div id="wrap" class="container">
+        <h1>Vehicle<span t-field="vehicle.immatriculation"></span></h1>
+        <div class="row">
+          <p>Date d'achat :<span t-field="vehicle.date_purchased"></span></p>
+          <p><img t-if="vehicle.thumbnail" t-attf-src="data:image/jpg;base64,{{ vehicle.thumbnail }}"
+                  height="120" width="120"
+                  style='margin:0px;padding-top:0px;'/>
+          </p>
+          <a t-attf-href="/rentcars/allvehicles">Retour liste</a>
+        </div>
+      </div>
+  </t>
+    </template>
+</odoo>

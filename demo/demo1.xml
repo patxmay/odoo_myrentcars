@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<odoo noupdate="1">
+    <data>
+        <record id="xml_vehicle_101" model="rentcars.vehicle">
+            <field name="model">Renault zoé</field>
+            <field name="active">1</field>
+            <field name="immatriculation">CC741CC</field>
+        </record>
+    </data>
+</odoo>

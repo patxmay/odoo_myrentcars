@@ -1,0 +1,33 @@
+<odoo>
+    <!-- Menu de l'application rentacar -->
+    <menuitem id="menu_rentcars" name="Location véhicules" />
+
+    <!-- Action pour ouvrir la liste des véhicules -->
+    <record id="action_rentcars_vehicle" model="ir.actions.act_window">
+       <field name="name">RentCars Vehicles</field>
+       <field name="res_model">rentcars.vehicle</field>
+       <field name="view_mode">list,form</field>
+    </record>
+
+    <!-- Action pour ouvrir la liste des garages -->
+    <record id="action_rentcars_garage" model="ir.actions.act_window">
+        <field name="name">RentCars Garage</field>
+        <field name="res_model">rentcars.garage</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+     <!-- Action pour ouvrir la liste des options -->
+    <record id="action_rentcars_option" model="ir.actions.act_window">
+        <field name="name">RentCars Options</field>
+        <field name="res_model">rentcars.option</field>
+        <field name="view_mode">list,form</field>
+    </record>
+    
+    <!-- Lien de menu qui utilise l'action qui affiche la liste des véhicules -->
+    <menuitem id="menu_rentcars_vehicle" name="Vehicule" parent="menu_rentcars" action="action_rentcars_vehicle" sequence="10"  />
+    <!-- Menu pour  garages, les options et les catégories -->
+    <!-- les menus doivent etre positionnes apres les actions-->
+    <menuitem id="menu_rentcars_garage" name="Garages" parent="menu_rentcars" action="action_rentcars_garage" sequence="15" />
+    <menuitem id="menu_rentcars_option" name="Options Vehicules" parent="menu_rentcars" action="action_rentcars_option" sequence="20" />
+    
+</odoo>

@@ -1,0 +1,7 @@
+.my-group-bordered {
+    border: 1px solid #cfcfcf;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    background-color: #fafafa;
+}

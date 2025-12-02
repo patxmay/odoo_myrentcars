@@ -1,0 +1,53 @@
+<odoo>
+  <!-- 
+  ************************************* 
+   VUE FORM 
+  *************************************
+  -->
+  <record id="view_form_garage" model="ir.ui.view">
+     <field name="name">Garage form</field>
+     <field name="model">rentcars.garage</field>
+     <field name="arch" type="xml">
+         <form string="garage">
+             <sheet>
+               <h3>Première partie</h3>
+               <group name="group_name1">
+                 <field name="name"/>
+                 <field name="active"/>
+                 <field name="places_max"/>
+               </group>
+               <h3>Deuxième partie</h3>
+               <group name="group_name2">
+                 <field name="address_street"/>
+                 <field name="address_zipcode"/>
+                 <field name="address_city"/>
+               </group>
+               <h3>Deuxième partie</h3>
+               <group name="group_name2">
+                 <notebook>
+                   <page name="page1" string="Liste des voitures">
+                     <field name="vehicle_ids" widget="One2many"/>
+                   </page>
+                 </notebook>
+               </group>
+             </sheet>
+         </form>
+     </field>
+  </record>
+  <!-- 
+  ************************************* 
+   VUE LISTE 
+  *************************************
+  -->  
+  <record id="view_list_garage" model="ir.ui.view">
+     <field name="name">Garage list</field>
+     <field name="model">rentcars.garage</field>
+     <field name="arch" type="xml">
+         <list string="garage">
+             <field name="name"/>
+             <field name="active"/>
+             <field name="places_max"/>
+         </list>
+     </field>
+  </record>
+</odoo>
