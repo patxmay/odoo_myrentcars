@@ -19,7 +19,7 @@
     <record id="action_rentcars_garage" model="ir.actions.act_window">
         <field name="name">RentCars Garage</field>
         <field name="res_model">rentcars.garage</field>
-        <field name="view_mode">list,form,kanban</field>
+        <field name="view_mode">kanban,tree,form</field>
     </record>
 
     <!-- ***************************************************
@@ -40,5 +40,4 @@
     <!-- les menus doivent etre positionnes apres les actions-->
     <menuitem id="menu_rentcars_garage" name="Garages" parent="menu_rentcars" action="action_rentcars_garage" sequence="15" />
     <menuitem id="menu_rentcars_option" name="Options Vehicules" parent="menu_rentcars" action="action_rentcars_option" sequence="20" />
-    <menuitem id="menu_rentcars_kanban" name="xxxxx" parent="menu_rentcars" action="action_rentcars_kanabn" sequence="30" />
 </odoo>
