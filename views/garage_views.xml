@@ -39,11 +39,11 @@
    VUE LISTE 
   *************************************
   -->  
-  <record id="view_list_garage" model="ir.ui.view">
+  <record id="view_tree_garage" model="ir.ui.view">
      <field name="name">Garage list</field>
      <field name="model">rentcars.garage</field>
      <field name="arch" type="xml">
-         <tree string="garage">
+         <tree string="garage" default_order="name asc">
              <field name="name"/>
              <field name="active"/>
              <field name="places_max"/>
