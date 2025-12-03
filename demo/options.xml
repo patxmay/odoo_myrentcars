@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<odoo noupdate="1">
+    <!-- on ajoute 2 voitures dans le garage de Pau -->
+    <data>
+        <record id="xml_option_01" model="rentcars.option">
+            <field name="name">abs</field>
+            <field name="active">1</field>
+            <field name="description">Frein ABS</field>
+            <field name="category">security</field>
+        </record>
+        <record id="xml_option_02" model="rentcars.option">
+            <field name="name">airbag</field>
+            <field name="active">1</field>
+            <field name="description">Airbag avant</field>
+            <field name="category">security</field>
+        </record>        
+        <record id="xml_option_03" model="rentcars.option">
+            <field name="name">siege_cuir</field>
+            <field name="active">1</field>
+            <field name="description">Siège cuir</field>
+            <field name="category">aestheticism</field>
+        </record>        
+        <record id="xml_option_04" model="rentcars.option">
+            <field name="name">GPS</field>
+            <field name="active">1</field>
+            <field name="description">guidage GPS</field>
+            <field name="category">confort</field>
+        </record>        
+        <record id="xml_option_05" model="rentcars.option">
+            <field name="name">camera</field>
+            <field name="active">1</field>
+            <field name="description">Feu de recul</field>
+            <field name="category">confort</field>
+        </record>        
+	</data>
+</odoo>

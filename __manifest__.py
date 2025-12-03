@@ -36,7 +36,9 @@
     ],
     # only loaded in demonstration mode
     'demo': [
-        'demo/demo.xml',
+        'demo/garage.xml',
+        'demo/options.xml',
+        'demo/vehicle.xml',
     ],
 }
 

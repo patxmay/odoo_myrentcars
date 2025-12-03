@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<odoo noupdate="1">
+    <data>
+        <record id="xml_garage_01" model="rentcars.garage">
+            <field name="name">Lamerain</field>
+            <field name="active">1</field>
+            <field name="address_street">nationale 10</field>
+            <field name="address_zipcode">64500</field>
+            <field name="address_city">Saint jean de Luz</field>
+            <field name="places_max">50</field>
+        </record>
+        <record id="xml_garage_02" model="rentcars.garage">
+            <field name="name">Auto64</field>
+            <field name="active">1</field>
+            <field name="address_street">Puttilena</field>
+            <field name="address_zipcode">64122</field>
+            <field name="address_city">Urrugne</field>
+            <field name="places_max">10</field>
+        </record>
+        <record id="xml_garage_03" model="rentcars.garage">
+            <field name="name">NorAuto</field>
+            <field name="active">1</field>
+            <field name="address_street">nationale 122</field>
+            <field name="address_zipcode">64130</field>
+            <field name="address_city">Saint Pee sur nivelle</field>
+            <field name="places_max">100</field>
+        </record>
+    </data>
+</odoo>
