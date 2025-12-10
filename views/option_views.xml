@@ -4,7 +4,7 @@
    VUE FORM 
   *************************************
   -->
-  <record id="view_form_option1" model="ir.ui.view">
+  <record id="view_form_option" model="ir.ui.view">
     <field name="name">Option form</field>
     <field name="model">rentcars.option</field>
     <field name="arch" type="xml">
@@ -33,14 +33,14 @@
    VUE tree 
   *************************************
   -->
-  <record id="view_form_option2" model="ir.ui.view">
-    <field name="name">Option list</field>
+  <record id="view_tree_option" model="ir.ui.view">
+    <field name="name">Arbre des options</field>
     <field name="model">rentcars.option</field>
     <field name="arch" type="xml">
-      <list string="option" default_order="name asc">
+      <tree string="option" default_order="name asc">
         <field name="name"/>
         <field name="active"/>
-      </list>
+      </tree>
     </field>
   </record>
 </odoo>

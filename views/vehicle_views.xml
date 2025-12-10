@@ -97,12 +97,12 @@
     <field name="name">Vehicle list</field>
     <field name="model">rentcars.vehicle</field>
     <field name="arch" type="xml">
-      <list string="vehicle" default_order="marque asc"> 
+      <tree string="Arbre des véhicules" default_order="marque asc"> 
         <field name="marque"/>
         <field name="vehicle_model"/>
         <field name="immatriculation"/>
         <field name="date_purchased"/>
-      </list>
+      </tree>
     </field>
   </record>
   <!-- 
