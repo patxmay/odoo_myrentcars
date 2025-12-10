@@ -16,7 +16,7 @@ class Vehicle(models.Model):
   active = fields.Boolean("Actif ?", default=True)
   immatriculation = fields.Char("Plaque minéralogique")
   date_purchased = fields.Date(string="Date d'achat")
-  model = fields.Char("Modele")
+  vehicle_model = fields.Char("Modele")
   marque = fields.Char("Marque")
   age_vehicle=fields.Integer(compute="_age_vehicle", string="Age of vehicle (years)")
   
@@ -41,7 +41,8 @@ class Vehicle(models.Model):
   def _check_immatriculation(self):
     # immat :  AA-123-AA
     self.ensure_one()  # vérifie que quel self contient 1 seul record.
-    pattern=re.compile('^[A-Z]{2}-\d{3}-[A-Z]{2}$')
+    regex = r"^[A-Z]{2}-\d{3}-[A-Z]{2}$"
+    pattern = re.compile(regex)
     return pattern.match(self.immatriculation)
 
   def button_check_immatriculation(self):

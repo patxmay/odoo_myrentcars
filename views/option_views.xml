@@ -30,14 +30,14 @@
   </record>
   <!-- 
   ************************************* 
-   VUE LIST 
+   VUE tree 
   *************************************
   -->
   <record id="view_form_option2" model="ir.ui.view">
     <field name="name">Option list</field>
     <field name="model">rentcars.option</field>
     <field name="arch" type="xml">
-      <list string="option">
+      <list string="option" default_order="name asc">
         <field name="name"/>
         <field name="active"/>
       </list>

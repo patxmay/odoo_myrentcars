@@ -2,7 +2,7 @@
 <odoo noupdate="1">
     <data>
         <record id="xml_vehicle_01" model="rentcars.vehicle">
-            <field name="model">Fiat Punto</field>
+            <field name="vehicle_model">Fiat Punto</field>
             <field name="active">1</field>
             <field name="immatriculation">GG-001-GG</field>
             <field name="date_purchased" eval="datetime.now()"></field>
@@ -12,7 +12,7 @@
             <field name="garage_id" eval="ref('xml_garage_01')"/>
         </record>
         <record id="xml_vehicle_02" model="rentcars.vehicle">
-            <field name="model">Audi</field>
+            <field name="vehicle_model">Audi</field>
             <field name="active">1</field>
             <field name="immatriculation">FF-001-FF</field>
             <field name="date_purchased" eval="datetime.now()"></field>
@@ -22,7 +22,7 @@
             <field name="garage_id" ref="xml_garage_01"/>
         </record>
         <record id="xml_vehicle_03" model="rentcars.vehicle">
-            <field name="model">2CV</field>
+            <field name="vehicle_model">2CV</field>
             <field name="active">1</field>
             <field name="immatriculation">55-DFG-96</field>
             <field name="date_purchased" eval="datetime.now()"></field>
@@ -33,7 +33,7 @@
             <field name="option_ids" eval="[(4, ref('xml_option_01')),(4, ref('xml_option_02'))]"/>
         </record>
         <record id="xml_vehicle_04" model="rentcars.vehicle">
-            <field name="model">golf</field>
+            <field name="vehicle_model">golf</field>
             <field name="active">1</field>
             <field name="immatriculation">75-DFG-96</field>
             <field name="date_purchased" eval="datetime.now()"></field>

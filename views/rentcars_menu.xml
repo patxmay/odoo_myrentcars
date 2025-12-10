@@ -19,7 +19,7 @@
     <record id="action_rentcars_garage" model="ir.actions.act_window">
         <field name="name">RentCars Garage</field>
         <field name="res_model">rentcars.garage</field>
-        <field name="view_mode">kanban,tree,form</field>
+        <field name="view_mode">tree,form</field>
     </record>
 
     <!-- ***************************************************

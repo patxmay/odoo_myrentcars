@@ -30,7 +30,7 @@
            <h3>Première partie</h3>
            <group name="group1" class="my-group-bordered" >
                <group name="group1_column_left" class="my-group-bordered">
-                  <field name="model" />
+                  <field name="vehicle_model" />
                   <field name="active" />
                   <field name="marque" />
                </group>
@@ -47,11 +47,11 @@
                <group name="group2_left" class="my-group-bordered">
                  <!-- Afficher le champ immatriculation uniquement si le véhicule est utilisable --> 
                  
-                 <field name = 'broken_state' invisible = 'state != "broken"' require = 'state == "broken"'/>
-                 <field name = 'repair_state' invisible = 'state != "repair"' require = 'state == "repair"'/>
-                 <field name = 'use_state'    invisible = 'state != "use"'    require = 'state == "use"'/>
+                 <field name = 'broken_state' invisible="state != 'broken'" required="state == 'broken'"/>
+                 <field name = 'repair_state' invisible="state != 'repair'" required="state == 'repair'"/>
+                 <field name = 'use_state'    invisible="state != 'use'"    required="state == 'use'"/>
                  
-                 <field name="immatriculation" invisible = 'state != "use"'/>
+                 <field name="immatriculation" invisible = "state != 'use'"/>
                 
                  <field name="state" widget="statusbar"/>
 
@@ -64,9 +64,9 @@
            <h3>Troiseme partie</h3>
            <group name="groupe3" class="my-group-bordered">
              <group name="group3_column_left" class="my-group-bordered">
-                 <button name="action_set_use"    type="object" string="Utilisable"             invisible = 'state == "use"'/>
-          		 <button name="action_set_repair" type="object" string="En cours de réparation" invisible = 'state == "repair"'/>
-          		 <button name="action_set_broke"  type="object" string="En panne"               invisible = 'state == "broken"'/> 
+                 <button name="action_set_use"    type="object" string="Utilisable"             invisible="state != 'use'" />
+          		 <button name="action_set_repair" type="object" string="En cours de réparation" invisible="state != 'repair'" />
+          		 <button name="action_set_broke"  type="object" string="En panne"               invisible="state != 'broken'" /> 
              </group>
            </group>
            
@@ -79,10 +79,10 @@
              <group name="group4_column_right" class="my-group-bordered">
              	<field name="age_vehicle"/>
              </group>
-             
+			 <!--               
              <notebook>
              </notebook>
-             
+             -->
            </group> 
         </sheet>
       </form>
@@ -90,16 +90,16 @@
   </record>
   <!-- 
   ************************************* 
-   VUE LISTE 
+   VUE tree 
   *************************************
   -->
   <record id="view_tree_vehicle" model="ir.ui.view">
     <field name="name">Vehicle list</field>
     <field name="model">rentcars.vehicle</field>
     <field name="arch" type="xml">
-      <list string="Information">
+      <list string="vehicle" default_order="marque asc"> 
         <field name="marque"/>
-        <field name="model"/>
+        <field name="vehicle_model"/>
         <field name="immatriculation"/>
         <field name="date_purchased"/>
       </list>
@@ -116,11 +116,11 @@
     <field name="arch" type="xml">
         <search>
           <field name="immatriculation"/>
-          <field name="model"/>
+          <field name="vehicle_model"/>
           <field name="date_purchased"></field>
           <filter name="filter_inactive" string="Inactive" domain="[('active','=',False)]"/>
           <filter name="filter_active" string="Active" domain="[('active','=',True)]"/>
-          <filter name="filter_model" string="Modele" domain="[('model','=','RENAULT')]"/>
+          <filter name="filter_model" string="Modele" domain="[('vehicle_model','=','RENAULT')]"/>
         </search>
     </field>
   </record>  
